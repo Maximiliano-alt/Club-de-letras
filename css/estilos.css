@@ -3,9 +3,10 @@
      padding: 1em;
      text-align: left;
      border: 1px solid #DDD;
+     margin-left: 390px;
  }
  
- img {
+ #container h1 img {
      height: 130px;
      width: 170px;
      text-align: right;
@@ -17,7 +18,7 @@
      background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
      margin: 0;
      height: 50%;
-     width: 100%;
+     width: 77%;
      padding: 2em;
      border: 2px solid #DDD;
      font-size: 20px;
@@ -42,9 +43,13 @@
      height: 20px;
  }
  
- .buttons a:hover {
-     color: rgb(38, 41, 223);
-     justify-content: center;
+ .buttons img {
+     height: 130px;
+     width: 140px;
+ }
+ 
+ .buttons {
+     text-align: center;
  }
  
  .button-container {
