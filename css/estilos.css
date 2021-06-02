@@ -8,6 +8,7 @@
  img {
      height: 130px;
      width: 170px;
+     text-align: right;
  }
  
  #cabecera {
@@ -37,25 +38,16 @@
      border: 2px;
      padding: 10px 15px;
      padding-left: 20px;
-     background-color: white;
      font-size: 15px;
      height: 20px;
  }
  
- #comedia {
-     text-decoration: none;
-     display: inline-block;
-     color: rgb(20, 165, 56);
+ .buttons a:hover {
+     color: rgb(38, 41, 223);
+     justify-content: center;
  }
  
- #Romantico {
-     color: aqua;
- }
- 
- #btn a {
-     text-decoration: none;
- }
- 
- #btn a:hover {
-     color: brown;
+ .button-container {
+     justify-content: right;
+     display: flex;
  }
