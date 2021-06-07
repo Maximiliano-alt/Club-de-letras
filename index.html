@@ -18,10 +18,10 @@
 
                 <div class="col-md-12">
                     <div id="sb-search" class="sb-search">
-                        <form>
-                            <input class="sb-search-input" placeholder="Barra de búsqueda" type="text" name="search">
-                            <input class="sb-search-submit" type="submit">
-                            <span class="sb-icon-search"></span>
+                        <form method="get" action="http://google.com/search">
+                            <input class="sb-search-input"  placeholder="Barra de búsqueda" type="search"  name="q" results="5" />
+                            <button class="sb-search-submit" type="submit">Buscar</button> 
+                            <input type="hidden" name="siteseach" value="index.html"/>
                         </form>
                     </div>
                 </div>
