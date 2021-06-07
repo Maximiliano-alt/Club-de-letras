@@ -10,7 +10,7 @@ body {
     width: 200px;
     height: 350px;
     padding: 100px 110px;
-    border: 2px solid #DDD;
+    border: 0px solid #DDD;
     margin-left: 450px;
     background-color: aliceblue;
 }
@@ -27,5 +27,45 @@ input[type=text] {
     background-image: url('img/mail.jpg') left;
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding-left: 25px;
+}
+
+#login {
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    width: 140%;
+    opacity: 0.9;
+}
+
+#login:hover {
+    opacity: 1;
+}
+
+.input-container {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 50%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-field:focus {
+    border: 2px solid dodgerblue;
 }
