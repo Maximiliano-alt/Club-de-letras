@@ -1,15 +1,15 @@
  #container {
-     width: 70%;
+     width: 62.7%;
      padding: 1em;
      text-align: left;
      border: 1px solid #DDD;
-     margin-left: 390px;
+     margin-left: 233.5px;
  }
  
  #container h1 img {
      height: 130px;
      width: 170px;
-     text-align: right;
+     text-align: center;
  }
  
  #cabecera {
@@ -18,7 +18,7 @@
      background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
      margin: 0;
      height: 50%;
-     width: 77%;
+     width: 90.6%;
      padding: 2em;
      border: 2px solid #DDD;
      font-size: 20px;
@@ -44,15 +44,52 @@
  }
  
  .buttons img {
-     height: 130px;
-     width: 140px;
+     height: 110px;
+     width: 130px;
  }
  
  .buttons {
      text-align: center;
+     border: left 20px;
  }
  
  .button-container {
      justify-content: right;
-     display: flex;
+     position: relative;
+ }
+ 
+ .button-container a {
+     text-decoration: none;
+     color: inherit;
+ }
+ 
+ .section-default {
+     align: right;
+     text-align: -moz-right;
+     text-align: right;
+     background: none;
+ }
+ 
+ .col-md-12 {
+     position: relative;
+     min-height: 1px;
+     padding-left: 30px;
+ }
+ 
+ a .in {
+     color: #ef6eae;
+     color: var(--color);
+     transition: 0.25s;
+ }
+ 
+ .in:hover,
+ .in:focus {
+     animation: Pulse 1s;
+     box-shadow: 0 0 0 2em rgba(#fff, 0);
+ }
+ 
+ @keyframes in {
+     0% {
+         box-shadow: 0 0 0 0 var(--hover);
+     }
  }
