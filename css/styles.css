@@ -1,0 +1,31 @@
+body {
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    box-sizing: border-box;
+}
+
+#container {
+    text-align: left;
+    margin-top: 80px;
+    width: 200px;
+    height: 350px;
+    padding: 100px 110px;
+    border: 2px solid #DDD;
+    margin-left: 450px;
+    background-color: aliceblue;
+}
+
+input {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-family: Helvetica;
+    border: 2px solid #ccc;
+    border-radius: 4px
+}
+
+input[type=text] {
+    background-image: url('img/mail.jpg') left;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
