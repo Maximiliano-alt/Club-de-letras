@@ -61,7 +61,13 @@ input[type=text] {
 }
 
 .input-field {
-    width: 50%;
+    width: 170px;
+    padding: 10px;
+    outline: none;
+}
+
+.input-key {
+    width: 185px;
     padding: 10px;
     outline: none;
 }
