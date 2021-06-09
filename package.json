@@ -1,0 +1,29 @@
+{
+  "name": "club_de_letras",
+  "version": "1.0.0",
+  "description": "pagina web para poder recomendar y compartir libros ",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maximiliano-alt/Club-de-letras.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "npm",
+    "club",
+    "letras"
+  ],
+  "author": "Equipo 7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maximiliano-alt/Club-de-letras/issues"
+  },
+  "homepage": "https://github.com/Maximiliano-alt/Club-de-letras#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
