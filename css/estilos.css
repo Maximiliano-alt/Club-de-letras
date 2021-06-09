@@ -138,7 +138,7 @@ body {
 
 #item {
     background: black;
-    width: 780px;
+    width: 800px;
     height: 52px;
     position: relative;
 }
@@ -166,7 +166,7 @@ body {
 }
 
 .barra {
-    color: black;
+    color: pink;
     padding: 15px;
 }
 
@@ -216,7 +216,7 @@ ul {
 }
 
 .barra {
-    color: black;
+    color: pink;
     padding: 15px;
 }
 
@@ -264,7 +264,7 @@ li {
 }
 
 .barra {
-    color: black;
+    color: pink;
     padding: 15px;
 }
 
@@ -275,10 +275,6 @@ a {
     padding: 12px 26px;
 }
 
-.barra {
-    color: black;
-    padding: 15px;
-}
 
 .section-default {
     align: right;
