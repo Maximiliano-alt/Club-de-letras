@@ -3,6 +3,8 @@ body {
     background-image: url("background.jpg");
     background-repeat: repeat;
     background-size: 120px 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 #container p img {
@@ -274,7 +276,6 @@ a {
     display: block;
     padding: 12px 26px;
 }
-
 
 .section-default {
     align: right;
