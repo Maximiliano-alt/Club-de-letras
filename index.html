@@ -3,54 +3,83 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
     <title>Club de letras</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<header>
-    <div id="container">
-        <div id="cabecera">
-            <div class="button-container">
-               <a href="registro.html"> <button class="in">Login</button></a>
-                <a href="registro.html"><button class="in">Sing In</button></a>
-                <div class="col-md-12">
-                    <div id="sb-search" class="sb-search">
-                        <form method="get" action="http://google.com/search">
-                            <input class="sb-search-input" placeholder="Barra de búsqueda" type="search" name="q" results="5" />
-                            <button class="sb-search-submit" type="submit">Buscar</button>
-                            <input type="hidden" name="siteseach" value="index.html" />
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <section class="section-default">
 
-                <br><br>
-                <div id="item">
-                    <ul>
-                        <li><a href="">Reuniones</a> </li>
-                        <li class="barra"> | </li>
-                        <li><a href="">Escrituras</a></li>
-                        <li class="barra"> | </li>
-                        <li><a href="">Intercambios</a> </li>
-                        <li class="barra"> | </li>
-                        <li><a href="">Lecturas</a> </li>
-                        
-                    </ul>
-                </div>
-            </section>
-            <h1>Club de Letras</h1>
-            <h2>Leer, conversar, escribir, lo que quieras y más..</h2>
+<header class="main-header">
+
+    <div class="sb-search">
+        <div class="container-1">
+            <form method="get" action="http://google.com/search">
+                <span class="icon"><i class="fa fa-search"></i></span>
+
+                <input method="get" action="http://google.com/search" type="search" id="search" placeholder="Search..." />
+            </form>
         </div>
-        <div class="welcome">
-            <h3>¡Bienvenido al Club!</h3>
-            <img src="img/libros.jpg " alt="imagen de libros " align="center">
-            <h3>Elige el género que más te guste:</h3>
+
+        <div id="login">
+            <a href=""><button>Login</button></a>
+            <a href="registro.html"><button >Sing In</button></a>
         </div>
-        <br><br>
+
+        <section class="section-default">
+
+            <nav id="item">
+                <ul>
+                    <li><a href="">Reuniones</a> </li>
+                    <li class="barra"> | </li>
+                    <li><a href="">Escrituras</a></li>
+                    <li class="barra"> | </li>
+                    <li><a href="">Intercambios</a> </li>
+                    <li class="barra"> | </li>
+                    <li><a href="">Lecturas</a> </li>
+
+                </ul>
+            </nav>
+        </section>
+
+
+
+
+
     </div>
 
-    <br><br>
+
+
+
+</header>
+
+
+
+
+
+<br><br>
+
+
+
+
+
+<body>
+    <div class="container">
+
+
+        <div class="cabecera">
+
+            <h1>Club de Letras</h1>
+            <h2>Leer, conversar, escribir, lo que quieras y más..</h2>
+            <div class="welcome">
+                <h3>¡Bienvenido al Club!</h3>
+                <img src="img/libros.jpg " alt="imagen de libros " align="center">
+                <h3>Elige el género que más te guste:</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
     <div class="buttons ">
         <button class="button"><a href="comedia.html"><img  src="./img/comedia.jpg "  alt="comedia" ><br></a>Comedia</button>
         <button class="button"><a href="romantico.html"><img src="./img/romantico.jpeg"alt="romantico"><br></a>Romántico</button>
@@ -59,13 +88,6 @@
         <button class="button"><a href="terror.html"><img src="./img/terror.jpg"alt="terror"><br></a>Terror</button>
         <button class="button"><a href="aventura.html"><img src="./img/aventuras.jpg"alt="aventura"><br></a>Aventuras</button>
     </div>
-    <br>
-    <div class="unete">
-    </div>
-</header>
-
-
-<body>
-</body>
+</footer>
 
 </html>
