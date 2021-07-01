@@ -1,82 +1,200 @@
-body {
-    background-color: #00DBDE;
-    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
-    box-sizing: border-box;
-}
-
-#container {
-    text-align: left;
-    margin-top: 80px;
-    width: 200px;
-    height: 350px;
-    padding: 100px 110px;
-    border: 0px solid #DDD;
-    margin-left: 450px;
-    background-color: aliceblue;
-}
-
-input {
-    padding: 12px 25px;
-    font-size: 16px;
-    font-family: Helvetica;
-    border: 2px solid #ccc;
-    border-radius: 4px
-}
-
-input[type=text] {
-    background-image: url('img/mail.jpg') left;
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding-left: 25px;
-}
-
-#login {
-    background-color: dodgerblue;
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    cursor: pointer;
-    width: 140%;
-    opacity: 0.9;
-}
-
-#login:hover {
-    opacity: 1;
-}
-
-.input-container {
-    display: -ms-flexbox;
-    /* IE10 */
-    display: flex;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.icon {
-    padding: 10px;
-    background: dodgerblue;
-    color: white;
-    min-width: 50px;
-    text-align: center;
-}
-
-.icon:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
-
-.input-field {
-    width: 170px;
-    padding: 10px;
-    outline: none;
-}
-
-.input-key {
-    width: 185px;
-    padding: 10px;
-    outline: none;
-}
-
-.input-field:focus {
-    border: 2px solid dodgerblue;
-}
+    body {
+        background-color: #00DBDE;
+        background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+        box-sizing: border-box;
+        margin: auto;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .container {
+        margin-top: 80px;
+        width: 200px;
+        height: 350px;
+        padding: 100px 110px;
+        border: 0px solid #DDD;
+        margin-left: 450px;
+        background-color: aliceblue;
+    }
+    
+    body .container form {
+        margin: auto;
+    }
+    
+    input {
+        padding: 12px 25px;
+        font-size: 16px;
+        font-family: Helvetica;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    input[type=text] {
+        background-image: url('img/mail.jpg') left;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding-left: 25px;
+    }
+    
+    .btn-login {
+        background-color: dodgerblue;
+        color: white;
+        padding: 15px 25px;
+        border: none;
+        cursor: pointer;
+        width: 140%;
+        opacity: 0.9;
+        color: #fff !important;
+        font-size: 20px;
+        font-weight: 500;
+        position: relative;
+    }
+    
+    .btn-login:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 100%;
+        background: dodgerblue;
+        transition: all 1s ease;
+    }
+    
+    .btn-login:hover:before {
+        width: 100%;
+    }
+    
+    .btn-login {
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: dodgerblue;
+        border-radius: 0.6em;
+        color: #e74c3c;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        padding: 1.2em 2.8em;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+    }
+    
+    .btn-login:hover,
+    .btn-login:focus {
+        color: #fff;
+        outline: 0;
+    }
+    
+    .btn-login {
+        border-color: #f10ff1;
+        color: #fff;
+        background-image: -webkit-linear-gradient(45deg, #f10ff1 50%, transparent 50%);
+        background-image: linear-gradient(45deg, #f10ff1 50%, transparent 50%);
+        background-position: 100%;
+        background-size: 400%;
+        -webkit-transition: background 1000ms ease-in-out;
+        transition: background 1000ms ease-in-out;
+    }
+    
+    .btn-login:hover {
+        background-position: 0;
+    }
+    
+    .btn-register {
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: rgb(16, 194, 69);
+        border-radius: 0.6em;
+        color: #e74c3c;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        padding: 1.2em 2.8em;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+    }
+    
+    .btn-register:hover,
+    .btn-register:focus {
+        color: #fff;
+        outline: 0;
+    }
+    
+    .btn-register {
+        border-color: #f10ff1;
+        color: #fff;
+        background-image: -webkit-linear-gradient(45deg, #f10ff1 50%, transparent 50%);
+        background-image: linear-gradient(45deg, #f10ff1 50%, transparent 50%);
+        background-position: 100%;
+        background-size: 400%;
+        -webkit-transition: background 1000ms ease-in-out;
+        transition: background 1000ms ease-in-out;
+        width: 140%;
+    }
+    
+    .btn-register:hover {
+        background-position: 0;
+    }
+    
+    .input-container {
+        display: -ms-flexbox;
+        /* IE10 */
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .icon {
+        padding: 10px;
+        background: dodgerblue;
+        color: white;
+        min-width: 50px;
+        text-align: center;
+    }
+    
+    .icon:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .input-field {
+        width: 170px;
+        padding: 10px;
+        outline: none;
+    }
+    
+    .input-key {
+        width: 185px;
+        padding: 10px;
+        outline: none;
+    }
+    
+    .input-field:focus {
+        border: 2px solid dodgerblue;
+    }

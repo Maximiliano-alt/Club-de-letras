@@ -3,24 +3,167 @@ body {
     background-image: url("background.jpg");
     background-repeat: repeat;
     background-size: 120px 120px;
+    padding-top: 80px
 }
 
-#container p img {
-    height: 100px;
-    width: 140px;
+
+/*BARRA DE NAVEGACION DE LA PAGINA*/
+
+.main-header {
+    background: White;
+    color: white;
+    height: 80px;
+    width: 100%;
+    /* hacemos que la cabecera ocupe el ancho completo de la página */
+    left: 0;
+    /* Posicionamos la cabecera al lado izquierdo */
+    top: 0;
+    /* Posicionamos la cabecera pegada arriba */
+    position: fixed;
+    /* Hacemos que la cabecera tenga una posición fija */
+}
+
+#login a {
+    float: left;
+}
+
+#login a button {
+    color: black !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5em 1.1em;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: black;
+    transition: all 1s ease;
+    position: relative;
+    margin-top: 8px;
+}
+
+#login a button:hover {
+    background: black;
+    color: #fff !important;
+}
+
+.section-default {
+    color: black;
+    align: center;
+    text-align: -moz-center;
     text-align: center;
-    margin-left: 100px
 }
 
-#cabecera h1 {
-    font-size: 200px;
+#item {
+    border: 2px solid;
+    font-size: 20px;
+    width: 780px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    top: 15px;
 }
 
-#cabecera h2 {
-    font-size: 50px;
+#item a:hover {
+    color: #C850C0;
+    background: (0, 0, 0, 0, 2);
 }
 
-#container .welcome {
+#item ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+}
+
+#item li {
+    float: left;
+}
+
+#item a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 12px 26px;
+}
+
+.container-1 {
+    width: 1330px;
+    vertical-align: bottom;
+    position: fixed;
+    text-align: right;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    content: 30px;
+    top: 15px;
+}
+
+.container-1 input#search {
+    width: 200px;
+    height: 50px;
+    background: white;
+    border: none;
+    font-size: 20px;
+    float: left;
+    color: white;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: black;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+    color: #65737e;
+}
+
+.container-1 input#search:-moz-placeholder {
+    /* Firefox 18- */
+    color: #65737e;
+}
+
+.container-1 input#search::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #65737e;
+}
+
+.container-1 input#search:-ms-input-placeholder {
+    color: #65737e;
+}
+
+.container-1 .icon {
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #4f5b66;
+}
+
+.container-1 input#search:hover,
+.container-1 input#search:focus,
+.container-1 input#search:active {
+    transition: all 1s ease;
+    outline: none;
+    background: black;
+    color: white !important;
+}
+
+.container {
+    background-color: black;
+    width: 75.7%;
+    padding: 1em;
+    border: 1px solid #DDD;
+    margin-left: 140.5px;
+    display: flex;
+}
+
+.cabecera p {
+    font-family: Helvetica;
+    font-size: 20px;
+    text-align: left;
+}
+
+.cabecera .welcome {
     color: white;
     font-size: 50px;
     display: flex;
@@ -28,29 +171,46 @@ body {
     align-items: center;
 }
 
-#container .welcome img {
+.cabecera p img {
+    height: 100px;
+    width: 140px;
+    text-align: center;
+    margin-left: 100px
+}
+
+.cabecera h1 {
+    font-size: 200px;
+}
+
+.cabecera h2 {
+    font-size: 50px;
+}
+
+.cabecera .welcome img {
     border: 10px solid #C850C0;
     border-color: #C850C0;
 }
 
-#cabecera {
+.cabecera {
     color: black;
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     margin: 0;
     height: 50%;
-    width: 90.6%;
+    width: 70%;
     padding: 2em;
     border: 2px solid #DDD;
     font-size: 20px;
     font-weight: bold;
     box-shadow: 0px 5px 30px 0px rgba ( 0, 0, 0, 0.76);
+    text-align: center;
+    margin: 0 auto;
 }
 
-#container p {
-    font-family: Helvetica;
-    font-size: 20px;
-    text-align: left;
+@media only screen and (min-width:360px) and (max-width:1280px) {
+    .cabecera {
+        display: grid;
+    }
 }
 
 #btn {
@@ -71,10 +231,6 @@ body {
 
 .button-container a {
     color: inherit;
-}
-
-.sb-search {
-    text-align: left;
 }
 
 .buttons {
@@ -105,15 +261,6 @@ body {
     font-size: 25px;
 }
 
-#container {
-    background-color: black;
-    width: 62.7%;
-    padding: 1em;
-    text-align: left;
-    border: 1px solid #DDD;
-    margin-left: 233.5px;
-}
-
 #orden {
     background: #3e3e3e;
     width: 1075px;
@@ -122,51 +269,8 @@ body {
     left: 21.5vh;
 }
 
-#item a:hover {
-    color: chocolate;
-    background: (0, 0, 0, 0, 2);
-}
-
-#container {
-    background-color: black;
-    width: 62.7%;
-    padding: 1em;
-    text-align: left;
-    border: 1px solid #DDD;
-    margin-left: 233.5px;
-}
-
-#item {
-    background: black;
-    width: 780px;
-    height: 52px;
-    position: relative;
-}
-
-#item a:hover {
-    color: chocolate;
-    background: (0, 0, 0, 0, 2);
-}
-
-#item ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0;
-}
-
-#item li {
-    float: left;
-}
-
-#item a {
-    color: rgb(253, 253, 253);
-    text-decoration: none;
-    display: block;
-    padding: 12px 26px;
-}
-
 .barra {
-    color: black;
+    color: pink;
     padding: 15px;
 }
 
@@ -176,15 +280,6 @@ ul {
     padding: 0;
 }
 
-#container {
-    background-color: black;
-    width: 62.7%;
-    padding: 1em;
-    text-align: left;
-    border: 1px solid #DDD;
-    margin-left: 233.5px;
-}
-
 #orden {
     background: #3e3e3e;
     width: 1075px;
@@ -216,7 +311,7 @@ ul {
 }
 
 .barra {
-    color: black;
+    color: pink;
     padding: 15px;
 }
 
@@ -224,15 +319,6 @@ li {
     float: left;
 }
 
-#container {
-    background-color: black;
-    width: 62.7%;
-    padding: 1em;
-    text-align: left;
-    border: 1px solid #DDD;
-    margin-left: 233.5px;
-}
-
 #orden {
     background: #3e3e3e;
     width: 1075px;
@@ -264,7 +350,7 @@ li {
 }
 
 .barra {
-    color: black;
+    color: pink;
     padding: 15px;
 }
 
@@ -273,23 +359,6 @@ a {
     text-decoration: none;
     display: block;
     padding: 12px 26px;
-}
-
-.barra {
-    color: black;
-    padding: 15px;
-}
-
-.section-default {
-    align: right;
-    text-align: -moz-right;
-    text-align: right;
-    background: none;
-}
-
-.col-md-12 {
-    position: top;
-    padding-left: 0px;
 }
 
 a .in {

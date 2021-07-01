@@ -1,5 +1,5 @@
 //1. se invoca a express
-const express = require('express');
+const express = require('express'); //framework principal
 
 //2. se setea urlencoded para capturar los datos del formulario y para no tener errores
 const app = express(); //para usar todos los metodos que usa la libreria
@@ -27,11 +27,22 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+//8. invocamos al modulo de conexion
+const connection = require('./database/db');
 
+//9. estableciendo las rutas
 
 console.log(__dirname);
-app.get('/', (req, res) => {
-    res.send('hola mundo');
-}) app.listen(3000, (req, res) => { //funcion para correr el servidor
+
+app.get('/', (req, res) => { //index
+    res.render('index', { msg: 'este es un mensaje de prueba' });
+})
+app.get('/login', (req, res) => { //login
+    res.render('login');
+})
+app.get('/registro', (req, res) => { //Sing Up
+    res.render('registro');
+})
+app.listen(3000, (req, res) => { //funcion para correr el servidor
     console.log('SERVER RUNNING IN http://localhost:3000');
 })
