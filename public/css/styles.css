@@ -6,9 +6,9 @@ body {
 
 #container {
     text-align: left;
-    margin-top: 80px;
+    margin-top: 0px;
     width: 200px;
-    height: 350px;
+    height: 400px;
     padding: 100px 110px;
     border: 0px solid #DDD;
     margin-left: 450px;

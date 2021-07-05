@@ -8,10 +8,11 @@
     }
     
     .container {
-        margin-top: 80px;
-        width: 200px;
-        height: 350px;
-        padding: 100px 110px;
+        text-align: center;
+        margin-top: 40px;
+        width: 250px;
+        height: 450px;
+        padding: 80px 110px;
         border: 0px solid #DDD;
         margin-left: 450px;
         background-color: aliceblue;

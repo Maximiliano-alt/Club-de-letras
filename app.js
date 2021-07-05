@@ -43,6 +43,32 @@ app.get('/login', (req, res) => { //login
 app.get('/registro', (req, res) => { //Sing Up
     res.render('registro');
 })
+
+//10. Registracion
+app.post('/registro', async(req, res) => {
+    const user = req.body.user;
+    const name = req.body.name;
+    const date = req.body.date;
+    const mail = req.body.mail;
+    const pass = req.body.pass;
+    //se usa una variable para encriptar la contrasenia
+    let passwordHaash = await bcryptjs.hash(pass, 8);
+    connection.query('INSERT INTO users SET ?', { user: user, name: name, pass: passwordHaash }, async(error, results) => {
+        if (error) {
+            console.log(error);
+        } else {
+            res.render('registro', {
+                alert: true,
+                alertTitle: "Registro",
+                alertMessage: "Registro Exitoso!",
+                alertIcon: 'success',
+                showConfirmButton: false,
+                timer: 2000,
+                ruta: ''
+            })
+        }
+    })
+})
 app.listen(3000, (req, res) => { //funcion para correr el servidor
     console.log('SERVER RUNNING IN http://localhost:3000');
 })
