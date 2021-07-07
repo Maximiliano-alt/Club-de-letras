@@ -34,9 +34,7 @@ const connection = require('./database/db');
 
 console.log(__dirname);
 
-app.get('/', (req, res) => { //index
-    res.render('index', { msg: 'este es un mensaje de prueba' });
-})
+
 app.get('/login', (req, res) => { //login
     res.render('login');
 })
@@ -63,10 +61,75 @@ app.post('/registro', async(req, res) => {
                 alertMessage: "Registro Exitoso!",
                 alertIcon: 'success',
                 showConfirmButton: false,
-                timer: 2000,
+                timer: 5000,
                 ruta: ''
             })
         }
+    })
+})
+
+//11. Autenticacion con el login
+app.post('/auth', async(req, res) => {
+        const user = req.body.user;
+        const pass = req.body.pass;
+        let passwordHaash = await bcryptjs.hash(pass, 8);
+        if (user && pass) {
+            connection.query('SELECT * FROM users WHERE user = ?', [user], async(error, results) => {
+                if (results.length == 0 || !(await bcryptjs.compare(pass, results[0].pass))) { //si no se encuentra nada en la tabla o no coincide la pass se muestra un error en pantalla
+                    res.render('login', {
+                        alert: true,
+                        alertTitle: "Error",
+                        alertMessage: "Usuario o contrasena incorrectas",
+                        alertIcon: "error",
+                        showConfirmButton: true,
+                        timer: false,
+                        ruta: 'login'
+                    });
+                } else { //si se encuentra registrado se envia un mensaje de success
+                    req.session.loggedIn = true; //variable de sesion para autenticar en las demas paginas
+                    req.session.name = results[0].name; //variable de sesion
+                    res.render('login', {
+                        alert: true,
+                        alertTitle: "Conexion exitosa",
+                        alertMessage: "Login Correcto!",
+                        alertIcon: "success",
+                        showConfirmButton: false,
+                        timer: 1500,
+                        ruta: ''
+                    });
+                }
+            })
+        } else {
+
+            res.render('login', { //si no entrega ningun dato
+                alert: true,
+                alertTitle: "Advertencia",
+                alertMessage: "Porfavor ingrese un usuario y contrasena",
+                alertIcon: "warning",
+                showConfirmButton: true,
+                timer: false,
+                ruta: 'login'
+            });
+        }
+    })
+    //12. autenticacion de paginas
+app.get('/', (req, res) => {
+        if (req.session.loggedIn) {
+            res.render('index', {
+                login: true,
+                name: req.session.name
+            });
+        } else {
+            res.render('index', {
+                login: false,
+                name: 'Debe iniciar sesion'
+            })
+        }
+    })
+    //13. log out
+app.get('/logout', (req, res) => {
+    req.session.destroy(() => {
+        res.redirect('/')
     })
 })
 app.listen(3000, (req, res) => { //funcion para correr el servidor

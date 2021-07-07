@@ -19,7 +19,7 @@
     <div class="container">
         <h1>LOG IN</h1>
 
-        <form action="auth" method="POST">
+        <form action="/auth" method="POST">
 
             <div class="input-container">
                 <!-- mail -->
@@ -46,6 +46,21 @@
         </form>
     </div>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if (typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: <%= showConfirmButton %>,
+                timer: <%= timer %>,
+
+            }).then(() => {
+                window.location = '/<%= ruta %>'
+            })
+        </script>
+        <% } %>
 </body>
 
 </html>

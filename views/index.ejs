@@ -11,41 +11,61 @@
 
 <header class="main-header">
 
-    <div class="sb-search">
-        <div class="container-1">
-            <form method="get" action="http://google.com/search">
-                <span class="icon"><i class="fa fa-search"></i></span>
 
-                <input method="get" action="http://google.com/search" type="search" id="search" placeholder="Search..." />
-            </form>
-        </div>
-
-        <div id="login">
-            <a href="login"><button>Login</button></a>
-            <a href="registro"><button >Sing Up</button></a>
-        </div>
-
-        <section class="section-default">
-
-            <nav id="item">
-                <ul>
-                    <li><a href="">Reuniones</a> </li>
-                    <li class="barra"> | </li>
-                    <li><a href="">Escrituras</a></li>
-                    <li class="barra"> | </li>
-                    <li><a href="">Intercambios</a> </li>
-                    <li class="barra"> | </li>
-                    <li><a href="">Lecturas</a> </li>
-
-                </ul>
-            </nav>
-        </section>
+    <div class="container-1">
+        <span class="icon"><i class="fa fa-search"></i></span>
+        <form method="get" action="http://google.com/search">
 
 
-
-
-
+            <input method="get" action="http://google.com/search" type="search" id="search" placeholder="Search..." />
+        </form>
     </div>
+
+    <section class="section-default">
+
+        <nav id="item">
+            <ul>
+                <li><a href="">Reuniones</a> </li>
+                <li class="barra"> | </li>
+                <li><a href="">Escrituras</a></li>
+                <li class="barra"> | </li>
+                <li><a href="">Intercambios</a> </li>
+                <li class="barra"> | </li>
+                <li><a href="">Lecturas</a> </li>
+
+            </ul>
+        </nav>
+    </section>
+    <% if (login) { %>
+        <div id=r>
+            <ul class="nav">
+                <li>
+                    <a style="text-transform: uppercase;" href="#">Conectado:<strong><%= name %></strong> </a>
+                    <ul>
+                        <li><a href="#">OLI 1</a></li>
+                        <li><a href="#">Configuracion Cuenta</a></li>
+                        <li>
+                            <a href="logout" class="a-logout">Cerrar Sesion</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+        <%} else { %>
+            <div id="login">
+                <a href="login"><button>Login</button></a>
+                <a href="registro"><button >Sing Up</button></a>
+            </div>
+            <% } %>
+
+
+
+
+
 
 
 
