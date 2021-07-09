@@ -23,9 +23,9 @@
     
     #login {
         justify-content: right;
-        display: flex;
         top: 20px;
-        transform: translate(0, -70%)
+        transform: translate(0, 3%);
+        display: flex;
     }
     
     #login a {
@@ -50,13 +50,6 @@
         color: #fff !important;
     }
     
-    .section-default {
-        color: black;
-        align: center;
-        text-align: -moz-center;
-        text-align: right;
-    }
-    
     #item {
         border: 2px solid;
         font-size: 20px;
@@ -67,7 +60,9 @@
         top: 15px;
         text-align: center;
         margin: 0 auto;
-        transform: translate(-5%, -2%)
+        transform: translate(-5%, -130%);
+        color: black;
+        position: relative;
     }
     
     #item a:hover {
@@ -386,7 +381,7 @@
         margin: auto;
         justify-content: right;
         display: flex;
-        transform: translate(550px, -60%);
+        transform: translate(600px, 30%);
         width: 0%;
         height: 50px;
     }
